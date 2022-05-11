@@ -1,0 +1,565 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal,transmag]{IEEEtran}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\title{Cálculo diferencial e integral, Análisis Numérico}
+\author{José Danilo Bonilla Vides, 00019520}
+\markboth{Cálculo diferencial e integral, Análisis Numérico}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Transactions on Magnetics Journals}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+
+\begin{IEEEkeywords}
+IEEE, IEEEtran, IEEE Transactions on Magnetics, journal, \LaTeX, magnetics, paper, template.
+\end{IEEEkeywords}}
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+
+\IEEEpeerreviewmaketitle
+
+\section{Introducción}
+El cálculo de las matemáticas es una de las ciencias más importantes para el desarrollo humano. \\
+Desde el principio de los tiempos han existido diferentes técnicas y métodos que han ayudado 
+a la población humana a poder resolver problemas prácticos en dónde las matemáticas son una parte
+fundamental del proceso de la solución. \\
+
+Teóricamente pueden modelarse ciertas funciones para poder ser resueltas con el fin de un enfoque pedagógico y de aprendizaje
+pero en el ámbito profesional y práctico de la vida real, muchas veces se presentan ciertas funciones 
+que suponen un desafío y una complejidad que no se puede resolver con las soluciones algebraicas que son
+las que devuelven un valor exacto y preciso de la función. \\
+
+Es por eso que existen técnicas y métodos que son llamados "Métodos Numéricos" o también a veces llamado "Soluciones Numéricas" 
+que permiten resolver problemas que involucran funciones que son demasiado complejas
+o no tienen una solución exacta por cálculos elementales. \\
+
+Los métodos numéricos, denominados así porque, usualmente, consisten
+en realizar una sucesión más o menos larga de operaciones numéricas (normalmente mediante la ayuda de un
+ordenador), al cabo de las cuales encontramos un valor numérico que, si bien no es la solución exacta del
+problema, se le parece mucho, es decir, aproxima la solución buscada con una precisión razonablemente buena. \cite{apunteClase}
+\\
+En este reporte se abordarán 4 métodos numéricos pertenecientes a la rama del Cálculo diferencial e integral.
+\\
+Los cuatro métodos numéricos que se abordarán en este reporte son: 
+\begin{itemize}
+    \item \textbf{Método de Romberg}
+    \item  \textbf{Método de Simpson}
+    \item   \textbf{Cuadratura Gaussiana}
+    \item   \textbf{Diferencia media}
+\end{itemize}
+Existen ciertas aplicaciones en las que se puedan utilizar estos métodos, pero en las que se enfocará este reporte serán las 4 siguientes:
+\begin{itemize}
+    \item \textbf{Enésima derivada en un punto particular}
+    \item \textbf{Cálculo de áreas}
+    \item \textbf{Cálculo de volúmenes}
+    \item \textbf{Sólidos de revolución}
+\end{itemize}
+
+\section{Método de Romberg}
+\subsection{Descripción}
+
+La integración de Romberg es una técnica diseñada para obtener integrales numéricas
+de funciones de manera eficiente. Se basa en aplicaciones sucesivas de la regla del trapecio. \cite{chapra_mtodos_2007}
+\\
+Werner Romberg (1909–2093) concibió este procedimiento para mejorar la precisión de la regla 
+trapezoidal al eliminar términos sucesivos en la expansión asintótica en 1955. \cite{burden_numerical_2016}
+\\
+
+Este método requiere del uso de la regla del trapecio de aplicación múltiple, además de 2 estimaciones de la integral para obtener una tercera estimación más exacta. \\
+
+Deducción: \cite{chapra_mtodos_2007} \\
+Si partimos del hecho de que se requieren 2 estimaciones y se conoce que la estimación y el error correspondiente a la regla del trapecio de aplicación
+múltiple se representa de manera general como:
+\begin{equation}
+    I = I(h) + E(h)
+\end{equation}
+Donde $I$ es la estimación de la integral, $h$ es el paso de integración, $I(h)$ es la estimación de la integral con el paso de integración $h$, y $E(h)$ es el error de truncamiento. \\
+
+Entonces nuestras 2 estimaciones, usando tamaño de paso $h_1$ y $h_2$, se representan de manera general como:
+\begin{equation}
+    I(h_1)+ E(h_1) = I(h_2) + E(h_2)
+\end{equation}
+
+Además el error de la regla trapezoidal múltiple puede representarse en forma aproximada con la ecuación:
+
+\begin{equation} 
+    E \approxeq \frac{b-a}{12}h^2f'' 
+\end{equation}
+
+Vamos a suponer que $f''$ es constante para cada paso en $h$, así podemos determinar la razón entre los dos errores, de las dos estimaciones que necesitamos, lo cuál sería: 
+\begin{equation}
+    \frac{E(h_1)}{E(h_2)} \approxeq \frac{h_1}{h_2}
+\end{equation}
+
+Reagrupamos la ecuación 4 para poder sustituirla en la ecuación 2:
+\begin{equation}
+    E(h_1) \approxeq E(h_2)\frac{h_1}{h_2}^2
+\end{equation}
+
+Al sustituir nos queda:
+\begin{equation}
+    I(h_1)+  E(h_2) \frac{h_1}{h_2}^2  \approxeq I(h_2) + E(h_2)
+\end{equation}
+
+Despejando $E(h_2)$:
+\begin{equation}
+    E(h_2) \approxeq \frac{I(h_1)-I(h_2)}{1- (h_1/h_2)^2}
+\end{equation}
+
+A fin de obtener una mejor estimación de la integral, podemos sustituir en la ecuación 1:
+\begin{equation}
+    I \approxeq I(h_2)+\frac{1}{(h_1/h_2)^2-1}|I(h_2)-I(h_1)|
+\end{equation}
+
+Al demostrarse el error de esta estimación, da como resultado $O(h^4)$. Es un resultado mayor al del error de estimación al utilizar solo la regla del trapecio ($O(h^2)$).
+Este resultado se ha logrado al utilizar 2 estimaciones $O(h^2)$. \\
+
+Si utilizamos un caso donde el paso $h_2$ es dividido por la mitad de $h_1$, la ecuación se convierte en:
+\begin{equation}
+    I \approxeq I(h_2)+\frac{1}{2^2-1}|I(h_2)-I(h_1)|
+\end{equation}
+
+Al simplificar y agrupar términos de la ecuación, obtenemos:
+\begin{equation}
+    I \approxeq \frac{4}{3}I(h_2)-\frac{1}{3}I(h_1)
+\end{equation}
+
+Este procedimiento es un subconjunto de un método más general para combinar integrales y obtener mejores estimaciones. \\
+
+Entonces podemos seguir reduciendo el paso $h$ sucesivamente para obtener mejores estimaciones, por ejemplo al dividir nuevamente por la 
+mitad la ecuación anterior obtenemos una exactitud de $O(h^6)$, quedando la siguiente ecuación:
+\begin{equation}
+    I \approxeq \frac{16}{15}I_m-\frac{1}{15}I_l
+\end{equation}
+
+Así podemos ir dividiendo por la mitad el paso $h$ y la exactitud irá mejorando en cada iteración. \\
+
+Existe una forma general para representar todo este proceso con una ecuación, y es atribuida a Romberg, la cuál se representa de la siguiente manera:
+\begin{equation}
+    I_{j,k} \approxeq \frac{4^{k-1}I_{j+1, k-1}-I_{j,k-1}}{4^{k-1}-1}
+\end{equation}
+
+También es llamado Algoritmo de Integración de Romberg. \\
+
+Dónde:
+\begin{itemize}
+\item $I_{j+1, k-1}$ es la integral más exacta,
+\item  $I_{j, k-1}$ es la menos exacta,
+\item $I_{j,k}$ es la integral mejorada,
+\item $k$ significa el nivel de la integración
+\item  $j$ se usa para distinguir entre las dos estimación más y menos exacta.
+\end{itemize}
+
+Esta ecuación es de las más adecuadas para llevar su implemntación a la computadora.
+
+
+
+
+
+
+\subsection{Demostraciones de convergencia}
+    Al aplicar el método de Romberg, y utilizando el nivel 1 de integración es decir, en el momento que $k=1$,
+    se obtiene una estimación de la integral de $f$ entre $a$ y $b$, de manera que el error de la estimación es $O(h^2)$.
+    Es decir que al utilizar $k=1$, se está utilizando la regla del trapecio para estimar la integral. \\
+
+    Como este método se basa en dividir por la mitad el paso h en cada iteración, y con la deducción hecha, al utilizar el nivel 2, es decir con $k=2$, y $j=1$,
+    se obtiene la ecuación:
+    \begin{equation}
+        I_{1,2} \approxeq \frac{4}{3}I_{2, 1}-\frac{1}{3}I_{1,1}
+    \end{equation}
+
+    La cual tiene una convergencia de $O(h^4)$, y así al ir aumentando el nivel de la integración, se va aumentando la exactitud de la estimación en ($h^{2n}$).
+    Es decir la convergencia será mucho mayor por cada aumento del nivel de integración. \\
+\subsection{Análisis del error}
+    El criterio de paro o terminación puede darse mediante una ecuación del error relativo porcentual, para detenerse cuándo se esté satisfecho con los resultados obtenidos.
+    La ecuación con un método útil para calcular el error relativo porcentual es la siguiente:
+    \begin{equation}
+        |E_a| = |\frac{I_{1,k}-I_{1,k-1}}{I_{1,k}}|100\%
+    \end{equation}
+
+
+\subsection{Análisis de la eficiencia del método}
+    Evidentemente al tener una convergencia que aumenta en factor de $h^{2n}$, el método de Romberg es muy eficiente. 
+    Sobretodo al compararlo con otros métodos y obtener las cantidades de iteraciones necesarias para obtener un resultado que satisfaga
+    el criterio de paro, podemos determinar la eficiencia del método.  \\
+
+    A continuación se presenta el ejemplo 22.1 de la página 652, obtenido de \cite{chapra_mtodos_2007} \\
+        
+    Teniendo la función $f(x)=0.2 + 25x - 200x^2 + 675x^3 - 900x^4 +400x^5 $ y el intervalo $[0,0.8]$.
+    Al evaluarse esa integral, por medio de aplicaciones simples y múltiples de la regla del trapecio, se obtuvieron los siguientes resultados:
+
+    \begin{table}[h]
+        \begin{center}
+            \caption{Ejemplo Analisis de la eficiencia del método}
+            \begin{tabular}{| c | c | c | c |}
+                \hline
+            Segmentos & h & 0.1728 & ${E_t\%}$ \\ \hline
+            1 & 0.8 & 0.1728 & 89.5 \\
+            2 & 0.4 & 1.0688 & 34.9 \\
+            4 & 0.2 & 1.4848 & 9.5 \\ \hline
+            \end{tabular}
+            \label{tab:ejemplo}
+        \end{center}
+            \end{table}
+ 
+        Se utiliza el metodo de Romberg, para obtener una estimación de la integral,
+        recordamos que con el nivel 1, cuando $k=1$, se obtiene el mismo resultado que el de la regla de trapecio.
+        Cuándo utilizamos el nivel 2 de integración, es decir cuando $k=2$, se obtiene la siguiente ecuación:
+        \begin{equation}
+            I_{1,2} \approxeq \frac{4}{3}I_{2, 1}-\frac{1}{3}I_{1,1}
+        \end{equation}
+        
+        Obteniendo un resultado de $I_{1,2}$ = 1.367467. \\
+
+        Al trabajar con la siguiente iteración se obtiene un resultado de $I_{1,3}$ = 1.640533 \\
+
+        Al trabajar con la iteración de nivel 4, obtenemos exactamente el mismo resultado $I_{1,3}$, por lo que hemos llegado 
+        a nuestra condición de paro. \\
+
+        Hemos llegado a la condición de paro en tan solo 3 iteraciones
+        con el método de Romberg, al compararlo con otros métodos cómo por ejemplo
+        la regla de Simpson, se obtiene una eficiencia mucho mejor, ya que realizando el ejemplo
+        por el método de Simpson, este se tardaría 256 segmentos en poder llegar al mismo resultado
+        obtenido con Romberg. \\
+
+        Incluso, al exigir un resultado exacto con 7 cifras significativas, Romberg solo tarda 15 evaluaciones en poder
+        obtener el resultado exacto, demostrando que es muy eficiente y que possee una convergencia mucho más veloz
+        que la regla del trapecio y la regla de Simpson.
+
+\subsection{Ventajas y desventajas del método}
+    \subsubsection{Ventajas}
+    \begin{center}
+    Ventajas del método de Romberg:
+    \end{center}
+    \begin{itemize}
+        \item   Es un método con una convergencia mucho más rápida que los demás métodos, 
+        por ejemplo al compararlo con el método de Simpson y la regla del trapecio
+        \item   Su convergencia aumenta a factor de $h^{2n}$ por cada iteración, brindando resultados muy veloces
+        \item   La adaptación a la computarización del método por medio de la 
+        ecuación de la forma general presentada por Romberg es de una dificultad baja para el que lo implementa,
+        sin importar el lenguaje y/o software utilizado.
+        \item   El cálculo del error relativo como condición de paro es muy intuitivo, fácil y rápido
+    \end{itemize}
+    \subsection{Desventajas}
+    \begin{center}
+    Desventajas del método de Romberg:
+    \end{center}
+    \begin{itemize}
+        \item   Depende de conocer 2 estimaciones de la integral que se está calculando
+        \item   No se puede trabajar con él sin conocer la función de la integral que se está buscando evaluar
+        \item   Si se desea trabajar a mano, requiere un arduo trabajo, ya que se necesita calcular 
+        el nuevo resultado por la regla del trapecio al aumentar el nivel de integración, es decir se hace 
+        un doble trabajo por cada nueva iteración realizada.
+    \end{itemize}
+
+\subsection{Seudo-código}
+        Seudo-código del método de Romberg: \cite{in_mr} \\
+
+        ENTRADA: Extremos a, b; entero n $>$ 0 \\
+        SALIDA: un arreglo R (calcule R por renglones; solo los 2 últimos renglones
+        se guardan en almacenamiento) \\
+        PROCESO: \\
+        \begin{itemize}
+            \item   PASO 1; tomar el valor de $h=(b-a)$; \\
+                        $R_{1,1} = \frac{h}{2} (f(a)+f(b))$; \\
+            \item   PASO 2; SALIDA ($R_{1,1}$); \\
+            \item   PASO 3; Para i = 2, ..., n hacer pasos 4-8; \\
+            \item   PASO 4; Tomar $R_{2,1}$ = \\
+            $[R_{1,1} + h\displaystyle\sum_{k=1}^{2^{i-1}} f(a)+(k-0.5)h]/2$; \\
+            (Aproximación por la regla del trapecio) \\
+            \item   PASO 5; Para j = 2,...,i; \\
+                    Tomar $R_{2,j} = R_{2,j-1}+\frac{R_{2,j-1}-R_{1,j-1}}{4^{j-1}-1}$; \\
+                    (Extrapolación) \\
+            \item   PASO 6; SALIDA ($R_{2,j}$ por j= 1,2,...,j); \\
+            \item   PASO 7; Tomar $h = \frac{h}{2}$; \\
+            \item   PASO 8; Para j = 1,2,...,i; Tomar $R_{1,j}$ = $R_{2,j}$; \\
+                    (Actualizar el renglón 1 de R) \\
+            \item   PASO 9; PARAR;\\
+        \end{itemize}
+
+
+        Seudo-código más detallado: \cite{chapra_mtodos_2007} \\
+        $FUNCTION$ $Romberg (a, b, maxit, es)$ \\
+        $LOCAL$ $I(10, 10)$ \\
+        $n = 1$ \\
+        $I_{1,1} = TrapEq(n, a, b)$ \\
+        $iter = 0$ \\
+        $DOFOR$ \\
+        $iter = iter + 1$ \\
+        $n = 2^iter$ \\
+        $l_{iter+1,1} = TrapEq(n, a, b)$ \\   
+        $DOFOR$ $k = 2, iter + 1$ \\
+        $j = 2 + iter – k$ \\
+        $I_{j,k} = (4^{k–1} * I_{j+1,k–1} – I_{j,k-1})/(4^{k–1} – 1)$ \\
+        $END$ $DO$ \\
+        $ea = ABS((I_{1,iter+1} – I_{2,iter})/I_{1,iter+1}) * 100$ \\
+        $IF$ $(iter \geq maxit $ OR $ ea \leq es)$ $EXIT$ \\
+        $END$ $DO$ \\
+        $Romberg = I_{1,iter+1}$ \\
+        $END$ $Romberg$ 
+
+\subsection{Ejemplos}
+    Ejemplos del método de Romberg: \cite{in_mr}
+    \subsection{Ejemplo 1}
+    Evaluar con el método de Romberg, con un error máximo de 5 cifras significativas
+    \begin{equation} 
+        \int_1^2 f(x)=\frac{1}{x} dx
+    \end{equation}
+    \begin{enumerate}
+    \item Supongamos que $T_{N,1}$ es la aproximación de la integral de $f(x)$ en el intervalo $[1,2]$ \\begin{align*}
+        por medio de la regla trapezoidal con $n$ = $2^N$ subintervalos. Se tendrá la siguiente relación de recurrencia
+        que permite calcular dicha aproximación: \\
+        \begin{center}
+            \begin{equation} \footnotesize
+                T_{n,1} = \frac{1}{2}[T_{N-1,1} + \frac{{b-a}}{2^{N-1}}\displaystyle\sum_{{i=1 {\triangle i=2}}}^{{2^N-1}} f(a+(\frac{b-a}{2^N}i))]
+            \end{equation}
+        \end{center}
+    \item  Los restantes términos de las distintas sucesiones se calculan mediante la fórmula
+    general de extrapolación de Romberg: \\ 
+    \begin{center}
+        \begin{equation}
+            T_{n,j} = \frac{4^{j-1}T_{N+1,j-1}-T_{N,j-1}}{4^{j-1}-1}
+        \end{equation}
+    \end{center}
+    \item   A continuación se presenta la tabla con los valores calculados para los TN, j
+    mediante (17) y (18): \\
+    \begin{center}
+        \begin{table}[h]
+            \begin{center}
+                \caption{Ejemplo 1}
+                \begin{tabular}{| c | c | c | c | c |}
+                    \hline
+                N & J=1 & 2 & 3 & 4 \\ \hline
+                0 & 0.750000 & 0.694445 & 0.693175  & 0.693148\\ \hline
+                1 & 0.708334  & 0.693254  & 0.693148 & \\  \hline
+                2 & 0.697024  & 0.693155  & 0.693146 &\\ \hline
+                3 & 0.694122 & 0.693147  & &\\ \hline
+                3 & 0.693391 &  & &\\ \hline
+                \end{tabular}
+                \label{tab:EjemploEjercicio1}
+            \end{center}
+                \end{table}
+    \end{center}
+    \item   Teniendo en cuenta que el valor exacto de la integral es Ln(2)=0.693147, las
+    aproximaciones conseguidas se pueden considerar como buenas. Las pequeñas
+    diferencias entres sucesiones son debidas al error de redondeo. 
+    \end{enumerate}
+
+    \subsection{Ejemplo 2}
+    Usar el algoritmo de Romberg para calcular el valor de la integral de $f(x)$ usando segmentos de 1, 0.5 y 0.25 \\
+    \begin{equation}
+        \int_0^1 f(x)={e^{x^2}} dx
+    \end{equation}
+    \begin{enumerate}
+    \item Se hace la integración de nivel 1, usando la regla del trapecio\\
+        \begin{itemize}
+            \item   $(h_1 = 1)$: \\
+                \begin{equation}
+                    I(h_1) = \frac{1-0}{2}[e^{0^2} + e^{1^2}] = 1.859140914
+                \end{equation}
+                \item   $(h_2 = 0.5)$: \\
+                \begin{equation}
+                    I(h_2) = \frac{1-0}{4}[e^{0^2} + 2e^{(\frac{1}{2})^2}+ e^{1^2}] = 1.571583165
+                \end{equation}
+                \item   $(h_3 = 0.25)$: \\
+                \begin{equation}
+                    I(h_3) = \frac{1-0}{8}[e^{0^2} + 2[e^{(\frac{1}{4})^2}+e^{(\frac{2}{4})^2}+e^{(\frac{3}{4})^2}] + e^{1^2}] = 1.490678862
+                \end{equation}
+        \end{itemize}
+    \item   Ahora se pasa al segundo nivel de aproximación donde se usa la fórmula que se dedujo
+    anteriormente:
+    \begin{center}
+        \begin{equation}
+            \frac{4}{3}I(h_2)-\frac{1}{3}I(h_1)
+        \end{equation}
+    \end{center}
+
+    Donde $I(h_1)$ es la integral menos exacta (la que usa menos subintervalos) e $I(h_2)$ es
+    la más exacta (la que usa el doble de subintervalos). 
+
+    \item   Utilizando $h1 = h1$ (calculado anteriormente) y $h2 = h2$ (calculado anteriormente) se obtiene:
+    \begin{center}
+    \begin{equation}
+        \frac{4}{3}(1.571583165)-\frac{1}{3}(1.859140914) = 1.475730582
+    \end{equation}
+    \end{center}
+    Utilizando $h1 = h2$ (calculado anteriormente) y $h2 = h3$ (calculado anteriormente) se obtiene:
+    \begin{center}
+    \begin{equation}
+        \frac{4}{3}(1.490678862)-\frac{1}{3}(1.571583165) = 1.463710761
+    \end{equation}
+    \end{center}
+    \item   Se continua con la integración de nivel 3, usando la ecuación:
+    \begin{center}
+    \begin{equation}
+        \frac{16}{15}I_m-\frac{1}{15}I_l
+    \end{equation}
+    \end{center}
+    Donde: $I_l$ es la integral menos exacta (la que usa menos subintervalos) e $I_m$ es la más exacta (la que usa el doble de subintervalos).
+    \item   Se obtiene como resultado de la integración de nivel 3:
+    \begin{center}
+    \begin{equation}
+        \frac{16}{15}(1.46...)-\frac{1}{15}(1.47...) = 1.46290944
+    \end{equation}
+    \end{center}
+    Siendo un resultado bastante aproximado y preciso, si se desea obtener un resultado más exacto, se puede seguir subiendo el nivel de la integración.
+
+    Por ejemplo para el nivel 4 de integración se utilizará la ecuación:
+    \begin{center}
+    \begin{equation}
+        \frac{64}{63}I_m-\frac{1}{63}I_l
+    \end{equation}
+    \end{center}
+    Donde: $I_l$ es la integral menos exacta (la que usa menos subintervalos) e $I_m$ es la más exacta (la que usa el doble de subintervalos).
+    \end{enumerate}
+    \section{Método de Simpson}
+\subsection{Descripción}
+    Teorema de Simpson
+\subsection{Demostraciones de convergencia}
+    Demostraciones de convergencia
+\subsection{Análisis del error}
+\begin{lipsum}
+    Análisis del error
+\end{lipsum}
+\subsection{Análisis de la eficiencia del método}
+\begin{lipsum}
+    Análisis de la eficiencia del método
+\end{lipsum}
+\subsection{Ventajas y desventajas del método}
+\begin{lipsum}
+    Ventajas y desventajas del método
+\end{lipsum}
+\subsection{Pseudo-código}
+\begin{lipsum}
+    Pseudo-código
+\end{lipsum}
+\subsection{Ejemplos}
+\begin{lipsum}
+    Ejemplos
+\end{lipsum}
+\section{Cuadratura Gaussiana}
+\subsection{Descripción}
+\begin{lipsum}
+    Teorema de Gauss
+\end{lipsum}
+\subsection{Demostraciones de convergencia}
+\begin{lipsum}
+    Demostraciones de convergencia
+\end{lipsum}
+\subsection{Análisis del error}
+\begin{lipsum}
+    Análisis del error
+\end{lipsum}
+\subsection{Análisis de la eficiencia del método}
+\begin{lipsum}
+    Análisis de la eficiencia del método
+\end{lipsum}
+\subsection{Ventajas y desventajas del método}
+\begin{lipsum}
+    Ventajas y desventajas del método
+\end{lipsum}
+\subsection{Pseudo-código}
+\begin{lipsum}
+    Pseudo-código
+\end{lipsum}
+\subsection{Ejemplos}
+\begin{lipsum}
+    Ejemplos
+\end{lipsum}
+\section{Diferencia Media}
+\subsection{Descripción}
+\begin{lipsum}
+    Teorema de Diferencia Media
+\end{lipsum}
+\subsection{Demostraciones de convergencia}
+\begin{lipsum}
+    Demostraciones de convergencia
+\end{lipsum}
+\subsection{Análisis del error}
+\begin{lipsum}
+    Análisis del error
+\end{lipsum}
+\subsection{Análisis de la eficiencia del método}
+\begin{lipsum}
+    Análisis de la eficiencia del método
+\end{lipsum}
+\subsection{Ventajas y desventajas del método}
+\begin{lipsum}
+    Ventajas y desventajas del método
+\end{lipsum}
+\subsection{Pseudo-código}
+\begin{lipsum}
+    Pseudo-código
+\end{lipsum}
+\subsection{Ejemplos}
+\begin{lipsum}
+    An article \cite{anarticle}
+\end{lipsum}
+\newpage
+\section{Bibliografía}
+\bibliographystyle{IEEEtran}
+\bibliography{Proyecto}
+\end{document}
+
