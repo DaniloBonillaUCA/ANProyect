@@ -474,31 +474,325 @@ Esta ecuación es de las más adecuadas para llevar su implemntación a la compu
     \end{center}
     Donde: $I_l$ es la integral menos exacta (la que usa menos subintervalos) e $I_m$ es la más exacta (la que usa el doble de subintervalos).
     \end{enumerate}
-    \section{Método de Simpson}
-\subsection{Descripción}
-    Teorema de Simpson
-\subsection{Demostraciones de convergencia}
-    Demostraciones de convergencia
-\subsection{Análisis del error}
-\begin{lipsum}
-    Análisis del error
-\end{lipsum}
-\subsection{Análisis de la eficiencia del método}
-\begin{lipsum}
-    Análisis de la eficiencia del método
-\end{lipsum}
-\subsection{Ventajas y desventajas del método}
-\begin{lipsum}
-    Ventajas y desventajas del método
-\end{lipsum}
-\subsection{Pseudo-código}
-\begin{lipsum}
-    Pseudo-código
-\end{lipsum}
-\subsection{Ejemplos}
-\begin{lipsum}
-    Ejemplos
-\end{lipsum}
+\section{Método de Simpson}
+    \subsection{Descripción}
+        Teorema de Simpson o Regla de Simpson, llamada así en honor a Thomas Simpson (1710-1761) y en ocasiones llamada Regla de Kepler.
+        \\
+
+        Gracias al uso de polinomios interpolantes de segundo grado, Simpson es una mejora de la regla del trapecio, y
+        pertenece junto con este ultimo a las llamadas Formulas de integracion de "Newton-Cotes".\\
+
+        Deducción: \cite{chapra_metodos_2007} \\
+        Partimos utilizando la fórmula de Newton-Cotes utilizando un polinomio interpolante de segundo grado:
+        \begin{equation} 
+            I = \int_a^b f(x) dx  \cong  \int_a^b f_2(x)
+        \end{equation}
+
+        Si se designa $a$ y $b$ como $x_0$ y $x_2$ respectivamente y $f_2(x)$ se representa por un polinomio de Lagrange de segundo grado,
+        la integral se transforma en:
+        \begin{equation} 
+            \begin{split}
+                I = \int_{x_0}^{x_2} [\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)} f(x_0) + \\
+                \frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)} f(x_1) + \\
+                \frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)} f(x_2)] dx
+            \end{split}
+        \end{equation} 
+
+        Luego de la debida integración y manipulación algebraica, obtenemos la siguiente fórmula:
+        \begin{equation}
+            I \cong \frac{h}{3}[f(x_0) + 4f(x_1) + f(x_2)]
+        \end{equation}
+
+        donde en este caso, $h = \frac{(b-a)}{2}$. Esta ecuación es conocida como \textbf{Regla de Simpson 1/3} 
+        debido a que $h$ esta dividida entre $3$. \\
+
+        Tambien cabe resaltar que la regla de Simpson $1/3$ tambien puede ser representada de la siguiente forma:
+
+        \begin{figure}[H] \label{trapecioSimpson}
+            \includegraphics[scale=0.55]{images/trapecio Simpson.png}
+            \centering
+            \caption{ Fórmula de Simpson $1/3$ representada de la misma forma que el area de un trapecio}
+        \end{figure}
+
+        Aplicando la misma secuencia logica vista anteriormente para un polinomio de Lagrange de tercer grado a cuatro puntos obtenemos:
+        \begin{equation}
+            \begin{split}
+                I \cong \frac{3h}{8}[f(x_0) + 3f(x_1) + 3f(x_2) + f(x_3)]
+            \end{split}
+        \end{equation}
+
+        Donde $h = \frac{(b-a)}{3}$, además de esto a la fórmula anterior se le conoce como \textbf{Regla de Simpson 3/8} debido a que $h$ se multiplica por $\frac{3}{8}$.
+
+    \subsection{Demostraciones de convergencia}
+        Dado que Simpson pertenece a la familia de las formulas de integración de Newton-Cotes, podemos ver un patron de convergencia.
+        La  Regla del Extremo Izquierdo \cite{openstax_calculusv1} integra exactamente funciones constantes. Tiene una convergencia de $O(h)$. \\
+        
+        A su vez la Regla del Trapecio integra exactamente funciones lineales. Tiene un convergencia de $O(h^2)$. \\
+
+        El orden n-esimo de la formula de Newton-Cote integra exactamente polinomios hasta el orden $"n"$ converge a $O(h^n+1)$. \\
+
+        Por lo que siendo la Regla de Simpson el segundo orden de la formula de Newton-Cote. Podemos concluir que Simpson converge a $O(h^3)$.
+
+    \subsection{Análisis del error}
+    
+        Al igual que la regla del trapecio, Simpson $1/3$ se obtiene al integrar el polinomio de interpolacion de Newton-Gregory hacia adelante:
+        
+        \notag{
+            \begin{equation}
+                \begin{split}
+                    I = \int_{x_0}^{x_2} [f(x_0)+\Delta f(x_0)\alpha + \frac{\Delta ^2 f(x_0)}{2} \alpha (\alpha - 1) \\
+                    + \frac{\Delta ^3 f(x_0)}{6} \alpha (\alpha - 1)(\alpha - 2) \\
+                    + \frac{f^4(\xi )}{24} \alpha (\alpha - 1)(\alpha - 2) (\alpha - 3)h^4] dx
+                \end{split}
+            \end{equation}
+        }
+        
+        Vemos que los limites de integracion van de $x_0$ a $x_2$. Por lo tanto, cuando se realizan las sustituciones para simplificar, la
+        integral es de $\alpha = 0$ a $2$: 
+
+        \notag{
+            \begin{equation}
+                \begin{split}
+                    I = h \int_0^2 [f(x_0) + \Delta f(x_0) \alpha + \frac{\Delta ^2 f(x_0)}{2} \alpha (\alpha - 1) \\
+                    + \frac{\Delta ^3 f(x_0)}{6} \alpha (\alpha - 1)(\alpha - 2) \\
+                    + \frac{f^4(\xi )}{24} \alpha (\alpha - 1)(\alpha - 2) (\alpha - 3)h^4] d\alpha
+                \end{split}
+            \end{equation}
+        } \\
+
+        Al integrarse se tiene: 
+
+        \notag{
+            \begin{equation}
+                \begin{split}
+                    I = h[\alpha f(x_0) + \frac{\alpha ^2}{2} \Delta f(x_0) + (\frac{\alpha ^2}{6} - \frac{\alpha ^2}{4}) \Delta ^2 f(x_0) \\
+                    + (\frac{\alpha ^4}{24} - \frac{\alpha ^3}{6} + \frac{\alpha ^2}{6}) \Delta ^3 f(x_0) \\
+                    + (\frac{\alpha ^5}{120} - \frac{\alpha ^4}{16} + \frac{11 \alpha ^3}{72} - \frac{\alpha ^2}{8}) f^4(\xi) h^4]_0^2
+                \end{split}
+            \end{equation}
+        } \\
+
+        Y evaluando los límites se obtiene: 
+
+        \begin{equation}
+            \begin{split}
+                I = h[2 f(x_0) + 2 \Delta f(x_0) + \frac{\Delta ^2 f(x_0)}{3} \\
+                + (0) \Delta ^3 f(x_0) - \frac{1}{90} f^4(\xi) h^4]
+            \end{split}
+        \end{equation} \\
+
+        Podemos observar que el coeficiente de la tercera diferencia dividida es cero. Debido a que $\Delta f(x_0) = f(x_1) - f(x_0)$
+        y $\Delta ^2 f(x_0) = f(x_2) - 2f(x_1) + f(x_0)$, la ecuación anterior se puede reescribir como: \\
+        
+        \begin{figure}[H] \label{errorTruncamiento}
+            \includegraphics[scale=0.22]{images/error Simpson.png}
+            \centering
+            \caption{ Fórmula de Simpson $1/3$ junto al error de truncamiento}
+        \end{figure}
+
+        Así, el primer término es la regla de Simpson 1/3 y el segundo es el error de truncamiento. Puesto que se suprime la tercera 
+        diferencia dividida, se obtiene el resultado significativo de que la fórmula tiene una precisión de tercer orden. \\
+
+        Por otro lado, la regla de Simpson $3/8$ tiene un error de:
+
+        \begin{equation} \tag{33}
+            \begin{split}
+                E_t = - \frac{3}{80} h^5 f^4(\xi)
+            \end{split}
+        \end{equation}
+
+        Como podemos observar, en Simpson $3/8$ el denominador es mayor al visto en $1/3$ por lo que podemos decir con seguridad que 
+        la Regla de Simpson $3/8$ es más exacta que la Regla de Simpson $1/3$.
+
+    \subsection{Análisis de la eficiencia del método}
+        
+        Para evidenciar la eficiencia del método se realizara un ejercicio por ambos métodos, obtenido de \cite{chapra_merthod_2007}. \\
+
+        Con la siguiente ecuacion integrar numericamente: $f(x) = 0.2 + 25x -200x^2 +675x^3 -900x^4 +400x^5$ con el intervalo $[0,0.8]$. 
+        El valor exacto de la integral es $1.640533$ \\
+        
+        Haciendo uso de la Regla del Trapecio.
+        Al evaluar los limites tenemos:
+        \begin{align}
+            f(0) &= 0.2 \\
+            f(0.8) &= 0.232
+        \end{align}
+
+        Sustituyendo:
+
+        \begin{equation} \notag
+            I \cong 0.8 \frac{0.2 +  0.232}{2} = 0.1728
+        \end{equation}
+
+        La cual representa un error de:
+
+        \begin{equation} \notag
+            E_t = 1.640533 - 0.1728 = 1.467733
+        \end{equation}
+
+        Ahora utilizando la Regla de Simpson $1/3$:
+
+        Evaluando los limites y el punto medio:
+        \begin{align}
+            f(0) &= 0.2 \\
+            f(0.4) &= 2.456 \\
+            f(0.8) &= 0.232
+        \end{align} 
+
+        Utilizando figura 1:
+
+        \begin{equation} \notag
+            I \cong 0.8 \frac{0.2 + 4(2.456) + 0.232}{6} = 1.367467
+        \end{equation}
+
+        Que representa un error exacto de:
+
+        \notag{
+            \begin{align}
+                E_t &= 1.640533 - 1.367467 = 0.2730667 \\ 
+                \varepsilon _t &= 16.6 \% 
+            \end{align}
+        }
+
+        Que es aproximadamente $5$ veces más precisa que una sola aplicación de la Regla del Trapecio. 
+        
+    \subsection{Ventajas y desventajas del método}
+        \subsubsection{Ventajas}
+            \begin{center}
+            Ventajas de la Regla de Simpson:
+            \end{center}
+            \begin{itemize}
+                \item   Se obtienen resultados precisos para polinomios cuadraticos y cubicos.
+                \item   Es un método con una convergencia más rápida que la regla del trapecio
+                \item   La Regla de Simpson $1/3$ alcanza una precision de tercer orden aun cuando se base
+                en solo tres puntos, por lo que da resultados exactos para polinomios cubicos aun cuando se obtenga
+                de una parabola.
+      
+            \end{itemize}
+        \subsection{Desventajas}
+            \begin{center}
+            Desventajas de la Regla de Simpson:
+            \end{center}
+            \begin{itemize}
+                \item  La Regla de Simpson $1/3$ es solamente ultilizada cuando el numero de segmentos es par. 
+                \item  Por otro lado la Regla de Simpson $3/8$ es utilizada cuando el numero de segmentos es impar. 
+                \item  Lo que nos lleva a que en ciertas situaciones sera necesario utilizar tanto la regla $1/3$ como $3/8$
+                para obtener un resultado preciso. 
+                
+            \end{itemize}
+    \subsection{Pseudo-código}
+        Seudo-código de la Regla de Simpson $1/3$: \\
+
+        $Start$ \\ \\
+        $Define$ $Function$ $f(x)$ \\ \\
+        $Input$ $lowerLimit, \hspace{0.2cm} upperLimit, \hspace{0.2cm} subInterval$ \\ \\
+        $Calculate:$ $stepSize = (lowerLimit - upperLimit)/subInterval$ \\ \\
+        $Calculate$ $Integration = f(lowerLimit) + f(upperLimit)$ \\ \\
+        $Set:$ $i = 1$ \\ \\
+        $Loop$ \\ \\
+            $k = lowerLimit + i * stepSize$ \\ \\
+            $If (i \hspace{0.2cm} mod \hspace{0.2cm} 3 = 0)$ \\ \\
+                $Integration = Integration + 2 * f(k)$ \\ \\
+            $Else$ \\ \\
+                $Integration = Integration + 4 * f(k)$ \\ \\
+            $End$ $If$ \\ \\
+            $i = i + 1$ \\ \\
+        $While$ $i < = subInterval$ \\ \\
+            $Integration = Integration * stepSize/3$ \\ \\
+        $Print Integration as Result$ \\ \\
+        $Stop$ \\ \\
+
+        Seudo-código de la Regla de Simpson $3/8$: \\
+
+        $Start$ \\
+        $Define$ $Function$ $f(x)$ \\ \\
+        $Input$ $lowerLimit, \hspace{0.2cm} upperLimit, \hspace{0.2cm} subInterval$ \\ \\
+        $Calculate:$ $stepSize = (lowerLimit - upperLimit)/subInterval$ \\ \\
+        $Calculate$ $Integration$ $= f(lowerLimit) + f(upperLimit)$ \\ \\
+        $Set:$ $i = 1$ \\ \\
+        $Loop$ \\ \\
+            $k = lowerLimit + i * stepSize$ \\ \\
+            $If (i \hspace{0.2cm} mod \hspace{0.2cm} 3 = 0)$ \\ \\
+                $Integration = Integration + 2 * f(k)$ \\ \\
+            $Else$ \\ \\
+                $Integration = Integration + 3 * f(k)$ \\ \\
+            $End$ $If$ \\ \\
+            $i = i + 1$ \\ \\
+        $While$ $i < = subInterval$ \\ \\
+        $Integration = Integration * stepSize * 3/8$ \\ \\
+        $Print Integration as Result$ \\ \\
+        $Stop$ \\ 
+
+    \subsection{Ejemplos}
+        Ejemplos del método de Romberg: \cite{chapra_method_2007}
+        \subsection{Ejemplo 1}
+            Con Simpson $3/8$ integrar en $5$ segmentos: \\
+
+            $f(x) = 0.2 + 25x -200x^2 +675x^3 -900x^4 +400x^5$ con el intervalo $[0,0.8]$ \\
+
+            - Debemos hacer uso de $1/3$ y $3/8$ a la vez. \\
+
+            Los datos necesarios para una aplicación con cinco segmentos $(h = 0.16)$ son:
+            \begin{align*}
+                f(0) = 0.2         & f(0.16) = 1.296919 \\
+                f(0.32) = 1.743393 & f(0.48) = 3.186015 \\
+                f(0.64) = 3.181929 & f(0.80) = 0.232
+            \end{align*}
+
+            La integral para los dos primeros segmentos se obtiene usando la regla de Simpson $1/3$:
+
+            \begin{equation} \notag
+                I \cong 0.32 \frac{0.2 + 4(1.296919) + 1.743393}{6} = 0.3803237
+            \end{equation}
+
+            Para los últimos tres segmentos, la regla $3/8$ se utiliza para obtener:
+
+            \begin{equation} \notag
+                I \cong 0.48 \frac{1.743393 + 3(3.186015 + 3.181929) + 0.232}{8} = 1.264754
+            \end{equation}
+
+            La integral total se calcula sumando los dos resultados:
+
+            \begin{equation} \notag
+                I = 0.3803237 + 1.264754 = 1.645077
+            \end{equation}
+
+        \subsection{Ejemplo 2}
+
+            Aproxmiar la integral: $\int_1^2 \frac{dx}{x}$ con $n = 2$ subintervalos: \\
+
+            - Hacemos uso de la Regla $1/3$
+
+            \begin{equation} \notag
+                I \cong \frac{h}{3}[f(x_0) + 4f(x_1) + f(x_2)]
+            \end{equation}
+
+            El ancho del subintervalo es:
+
+            \begin{equation} \notag
+                h = \frac{b - a}{n} = \frac{2 - 1}{2} = \frac{1}{2}
+            \end{equation}
+
+            Calculando los limites y el valor medio:
+
+            \begin{align*}
+                f(x_0) &= 1 \\
+                f(x_1) &= \frac{2}{3} \\
+                f(x_2) &= \frac{1}{2}
+            \end{align*}
+
+            Sustituyendo:
+
+            \begin{equation} \notag
+                I \cong \frac{0.5}{3}[1 + 4(\frac{2}{3}) + \frac{1}{2}]
+            \end{equation}
+
+            Teniendo finalmente como resultado:
+
+            \begin{equation} \notag
+                I = \frac{25}{36} \approx 0.694444 
+            \end{equation}
+
 \section{Cuadratura Gaussiana}
 \subsection{Descripción}
 \begin{lipsum}
