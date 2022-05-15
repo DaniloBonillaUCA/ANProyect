@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Proyecto"] 1652338469 "Proyecto.aux" "Proyecto.bbl" "Proyecto" 1652338473
+["bibtex Proyecto"] 1652644794 "Proyecto.aux" "Proyecto.bbl" "Proyecto" 1652644794
   "C:/Users/joshu/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "Proyecto.aux" 1652338472 6461 63e997c1d9e8b897c89d2573c5d984d9 "pdflatex"
+  "Proyecto.aux" 1652644792 8104 7b98d647d125d3c24378488b9f3aca22 "pdflatex"
   "Proyecto.bib" 0 -1 0 ""
   (generated)
   "Proyecto.bbl"
   "Proyecto.blg"
-["pdflatex"] 1652338469 "c:/Users/joshu/Documents/Workspaces/Analisis Numerico/ANProyect/Proyecto AN/Proyecto.tex" "Proyecto.pdf" "Proyecto" 1652338473
+["pdflatex"] 1652644789 "c:/Users/joshu/Documents/Workspaces/Analisis Numerico/ANProyect/Proyecto AN/Proyecto.tex" "Proyecto.pdf" "Proyecto" 1652644794
   "C:/Users/joshu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1652286010 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/joshu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1652285756 10246961 7fba94d9f96a6a26588999519736b400 ""
   "C:/Users/joshu/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -252,11 +252,18 @@
   "C:/Users/joshu/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636284872 56029 3f7889dab51d620aa43177c391b7b190 ""
   "C:/Users/joshu/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/joshu/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "Proyecto.aux" 1652338472 6461 63e997c1d9e8b897c89d2573c5d984d9 "pdflatex"
+  "Proyecto.aux" 1652644792 8104 7b98d647d125d3c24378488b9f3aca22 "pdflatex"
   "Proyecto.bbl" 0 -1 0 "bibtex Proyecto"
-  "Proyecto.tex" 1652338467 38335 122453e8724b76dabf553a0b48d73e50 ""
-  "c:/Users/joshu/Documents/Workspaces/Analisis Numerico/ANProyect/Proyecto AN/Proyecto.tex" 1652338467 38335 122453e8724b76dabf553a0b48d73e50 ""
+  "Proyecto.tex" 1652644784 53123 902ef8aaa05fa795fd53d1ccca848995 ""
+  "c:/Users/joshu/Documents/Workspaces/Analisis Numerico/ANProyect/Proyecto AN/Proyecto.tex" 1652644784 53123 902ef8aaa05fa795fd53d1ccca848995 ""
+  "images/Convergencia_Gauss.png" 1652644410 43588 a550cafb02a1bed33bf7b26b2ec06a89 ""
+  "images/eficiencia_metodos_nodos.PNG" 1652644410 59733 e2459604701dac9725d6631206ab6473 ""
+  "images/eficiencia_metodos_pesos.PNG" 1652644410 75156 7c6d90f7befb727008a6908201a56414 ""
   "images/error Simpson.png" 1652316998 49216 6346ac3586a0804e25004065a2067827 ""
+  "images/error_gauss.PNG" 1652644410 27130 f46cc72d4d1a895df70f67dc3cc678bc ""
+  "images/gauss.PNG" 1652644410 22380 85ff3cc65dbef77aaa463d5cbee234d9 ""
+  "images/puntosX_C.PNG" 1652644410 29268 391a08151e7c295e22c84f8031dd5fa7 ""
+  "images/transformacionlimites.PNG" 1652644410 7679 08968d8a7a94efd1a1110b338589e2a3 ""
   "images/trapecio Simpson.png" 1652313149 15742 3c8ead5fcca35dde26e587a0cb2cf4ae ""
   (generated)
   "Proyecto.aux"

@@ -793,35 +793,274 @@ Esta ecuación es de las más adecuadas para llevar su implemntación a la compu
                 I = \frac{25}{36} \approx 0.694444 
             \end{equation}
 
-\section{Cuadratura Gaussiana}
-\subsection{Descripción}
-\begin{lipsum}
-    Teorema de Gauss
-\end{lipsum}
-\subsection{Demostraciones de convergencia}
-\begin{lipsum}
-    Demostraciones de convergencia
-\end{lipsum}
-\subsection{Análisis del error}
-\begin{lipsum}
-    Análisis del error
-\end{lipsum}
-\subsection{Análisis de la eficiencia del método}
-\begin{lipsum}
-    Análisis de la eficiencia del método
-\end{lipsum}
-\subsection{Ventajas y desventajas del método}
-\begin{lipsum}
-    Ventajas y desventajas del método
-\end{lipsum}
-\subsection{Pseudo-código}
-\begin{lipsum}
-    Pseudo-código
-\end{lipsum}
-\subsection{Ejemplos}
-\begin{lipsum}
-    Ejemplos
-\end{lipsum}
+            \section{Cuadratura Gaussiana}
+            \subsection{Descripción}
+            Gauss plantea tomar puntos de la función que estén ubicados en partes distintas del intervalo para optimizar el cálculo del área o la integral de la manera mas exacta y precisa posible, con Gauss eliminamos la restricción de los puntos fijos sin la necesidad de que estén igualmente espaciados.
+            Se plantea de la siguiente manera: 
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=7.5cm ]{images/gauss.PNG}
+                \caption{Forma general de la cuadratura de Gauss}
+                \label{Formula de Gaussl}
+            \end{figure}
+            
+            
+            Consiste en remplazar la integral definida de la función por una sumatoria de coeficientes $c_1$, $c_2$ …$c_n$ multiplicado por los valores evaluados en la función $x_1$, $x_2$ …$x_n$. Entre mas coeficientes de $c$ y $x$ apliquemos, mejor será la precisión y menor será el error de este método. Para obtener los valores para poder realizar el método en dos puntos de integración.
+            
+            \begin{center}
+                $F(x)=1+x+x^2+x^3$
+            \end{center}
+                
+                
+            
+            
+            Debemos utilizar el siguiente polinomio de tercer grado de Gauss que nos garantiza  una integral exacta. 
+            
+            
+            \includegraphics[width=4cm]{images/puntosX_C.PNG}
+            
+            
+            Mediante un sistema de ecuaciones, encontramos las incógnitas faltantes para así poder realizar el método en dos puntos.Así con estos datos podemos encontrar la integral de Gauss para dos puntos, pero realmente podemos utilizar a Gauss para más puntos dependiendo del grado del polinomio y también así aumentando lo máximo posible su precisión.
+            
+            \begin{align*}
+                x_0=\dfrac{1}{\sqrt[]{3}}=0.5773503\\
+                x_1=\dfrac{-1}{\sqrt[]{3}}=-0.5773503\\
+                c_0=c_1=1
+            \end{align*}
+             
+             Asi, con los polinomios de Legendre podemos obtener tanto los puntos de integracion $x$ y los coeficientes $c$ para $n$ puntos distintos, en la siguiente tabla se muestran los valores hasta para 5 puntos:
+             
+                \begin{table}[h]
+                    \begin{center}
+                        \caption{Valores de $x$ y $c$ hasta 5 puntos}
+                        \begin{tabular}{| c | c | c | c |}
+                            \hline
+                        Puntos & Pesos & Valores de la funcion \\ \hline
+                         2& $c_0$ = 1 & $x_0$ = –0.577350269   \\
+                         & $c_1$ = 1 &$x_1$ = 0.577350269   \\ \hline
+                        & $c_0$ = 0.5555556 & $x_0$ = –0.774596669  \\ 
+                         3& $c_1$ = 0.8888889 & $x_1$ = 0  \\ 
+                         & $c_2$ = 0.5555556  & $x_2$ = 0.774596669  \\ \hline
+                         & $c_0$ = 0.3478548 & $x_0$ = –0.861136312  \\ 
+                         4& $c_1$ =  0.6521452 & $x_1$ =  –0.339981044  \\ 
+                         & $c_2$ =  0.6521452 & $x_2$ =  0.339981044  \\ 
+                         & $c_3$ = 0.3478548  & $x_3$ = 0.861136312 \\ \hline
+                         & $c_0$ = 0.2369269 & $x_0$ = –0.906179846   \\ 
+                         & $c_1$ = 0.4786287  & $x_1$ = –0.538469310  \\ 
+                         5& $c_2$ =  0.5688889 & $x_2$ = 0  \\ 
+                         & $c_3$ = 0.4786287 & $x_3$ = 0.538469310  \\ 
+                         & $c_4$ = 0.2369269  & $x_4$ = 0.906179846 \\ \hline
+                         
+                        \end{tabular}
+                        \label{tab:ejemploTablaGauss}
+                    \end{center}
+                        \end{table}
+             
+             Los limites de integracion fueron especificados de -1 a 1 para poder hacer el metodo mas simple y general posible, pero la mayoria de las funciones no cumpliran estos limites, es por eso que se necesita realizar una transformacion de los intervalos de integracion.
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=3cm]{images/transformacionlimites.PNG}
+            \end{figure}
+            Siendo $a$ nuestro limite inferior y $b$ nuestro limite superior podemos hacer lo siguiente:
+            
+            \begin{align*}
+               x=\dfrac{(b+a)+(b-a)x_d}{2},dx=\dfrac{(b-a)}{2}dx_d
+            \end{align*}
+            una vez tenemos $x$ y $dx$ podemos remplazarla en nuestra integral original, y asi obtener nuestra nueva funcion $g(x)$ transformada a sus nuevos limites de -1 a 1.
+            
+            
+            \subsection{Demostraciones de convergencia}
+            Las aplicaciones de la cuadratura Gaussiana son de una gran sustento matematico para las integrales, el calculo de areas bajo la curva e interpolacion de polinomios, Dada su naturaleza creciente de valores de n, esto hace que su aceleracion de convergencia sea mayor conforme mas nodos o mas grados tenga el polinomio, en el siguiente grafico se muestra la convergencia, en función del grado n de Legendre:
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=\linewidth]{images/Convergencia_Gauss.png}
+                \caption{Convergencia de Gauss - Legendre}
+                \label{fig:función del grado n de Legendre}
+            \end{figure}
+            
+            Esto implica una complejidad O(n) para n puntos, donde los polinomios de lagrenge van obteniendo una mayor precision mientras aumentan los nodos.
+            
+            \begin{align*}
+                I_1 = c_0f(x_0)+c_1f(x_1)\\
+                I_2= c_0f(x_0)+c_1f(x_1)+c_2f(x_2)\\
+                .\\
+                .\\
+                .\\
+                I_n= c_0f(x_0)+c_1f(x_1)+c_2f(x_2)+c_n+f(x_n)
+            \end{align*}
+            
+            
+            \subsection{Análisis del error}
+            Para el analisis del error necesitamos una tolerancia que este alojada entre los limites arbitrarios desde -1 a 1 donde n es el numero de nodos menos 1, aunque sea la formula de integracion de Gauss mas utilizada, este metodo presenta un error mas grande o pequeño dependiendo sobre todo del numero de nodos que se use, la formula para el analisis del error es la siguiente: 
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=\linewidth]{images/error_gauss.PNG}
+                \caption{Formula del error de Cuadratura Gaussiana}
+                \label{fig:Formula_error_Gauss}
+            \end{figure}
+            
+            
+            
+            
+            \subsection{Análisis de la eficiencia del método}
+            Las diferentes aplicaciones de Cuadratura suelen necesitar un numero pequeño de nodos para funcionar pero muchas veces la cuadratica gaussiana necesita mas nodos de lo habitual haciendo otros metodos de cuadratura mas calificados.
+            
+            \vspace{2mm}
+            
+            a continuacion las tabla con los distintos tipos de errores que presentan los distintos metodos de cuadratura y su efeciencia en nodos y pesos: 
+            
+            \vspace{2.6cm}
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=\linewidth]{images/eficiencia_metodos_nodos.PNG}
+                \caption{Grafica comparativa de eficiencia en los nodos}
+                \label{fig:Eficiencia en los nodos}
+            \end{figure}
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=\linewidth]{images/eficiencia_metodos_pesos.PNG}
+                \caption{Grafica comparativa de eficiencia en los pesos}
+                \label{fig:Eficiencia en los pesos}
+            \end{figure}
+            
+            Como se puede ver en las tablas, la complejidad y eficiencia de la cuadratura Gaussiana empeora conforme $n$ va en aumento, mientras que nuevos metodos basados en el metodo de newton son muy efectivos en los casos donde la $n$ es un numero bastante mas grande.
+                        
+                            \begin{table}[h]
+                    \begin{center}
+                        \caption{Tabla comparativa de error y rapidez}
+                        \begin{tabular}{| c | c | c | c |}
+                            \hline
+                        Metodo & $E_{abs}$ $\lbrace$$x_k$$\rbrace$ & $E_{rm}$ $\lbrace$$w_k$$\rbrace$ &Rapidez\\ \hline 
+                        GW & $O(\sqrt{n})$ & $O(n^{3/2})$ & $O(n^2)$ \\
+                        REC & $O(1)$ & $O(n)$ & $O(n^{1.7})$ \\
+                        GLR & $O(\sqrt{n})$ & $O(n)$ & $O(n)$ \\
+                        NEW & O($log$($log$(n))) & O($log$($log$(n))) & $O(n)$ \\ \hline
+                        \end{tabular}
+                        \label{tab:tabla de error y rapidez}
+                    \end{center}
+                        \end{table}
+            
+            
+            \subsection{Ventajas y desventajas del método}
+                \subsubsection{Ventajas}
+                        \begin{itemize}
+                            \item   Es una de los metodos mas rapidos de todos a pesar de tener que aumentar su numero de nodos y evaluaciones. 
+                            \item   No necesita puntos de evaluacion que este igualmente separados entre si ya que los selecciona de la manera mas optima.
+                            \item tanto los pesos como los valores de evaluacion ya estan arbitrareamente dados, solo dependera de cuantos nodos tiene o el grado del polinomio
+            
+                    \end{itemize}
+                \subsubsection{Desventajas}
+                        \begin{itemize}
+                            \item  Entre mas rigurosa sea la tolerancia habra que aumentar el numero de nodos teniendo asi que hacer mas evaluaciones.
+                            \item   Al estar limitada solo entre los intervalos [-1,1], puede que algunas funciones presenten singularidades
+                            \item   Los puntos de evaluacion van cambiando conforme con los anteriores
+                            
+            
+                    \end{itemize}
+                
+            \subsection{Pseudo-código}
+                    Seudo-código del la Cuadratura Gaussiana: \cite{in_mr} \\
+            
+                    ENTRADA: Limites de integracion a, b, F funcion a evaluar y m numero de nodos \\
+                    SALIDA: Integral calculada 
+                    (se guardan en almacenamiento) \\
+                    PROCESO: \\
+                    
+                            \begin{itemize}
+                        \item   PASO 1; Se opera $c_1=(b+a)/2$ y $c_1=(b-a)/2$. \\
+                        \item   PASO 2; El FOR desarrollla la sumatoria y evalua en la funcion a partir de los valores anteriores.\\
+                        \item   PASO 3; Por ultimo se calcula la integral sustituyendo el resultado de la sumatoria en la ecuacion general de la cuadratura Gaussiana.\\
+                        \item   PASO 4; se imprime el resultado. \\
+                    \end{itemize}
+                    
+                            Pseudo-código más detallado: \cite{Numerical Methods in Engineering with Python 3} \\
+                    $FUNCTION$ $ gaussQuad (f,a, b, m,)$ \\
+                    $c_1=(b+a)/2$ \\
+                    $c_2=(b-a)/2$ \\
+                    $x,A = gaussNodes(m)$ \\
+                    $sum = 0.0$\\
+                    $DO FOR$ $K=X$\\
+                    $ITER = ITER +1 $\\
+                    $sum = sum + A[ITER]*f(c1 + c2*x[ITER])$\\
+                    $END DO$\\
+                    $return$ $ c2*sum$\\
+                    $END$ $gaussQuad$ 
+            
+            \subsection{Ejemplos}
+            Aplicaremos la cuadratura gaussiana para encontrar el area  bajo la curva de la siguiente integral:
+            
+            
+                \begin{equation} 
+                    \int_0^3 f(x)=\frac{e^xsen(x)}{1+x^2} dx
+                \end{equation}
+                
+                \begin{enumerate}
+                    \item Primero necesitaremos hacer el cambio de limites de [0,3] a [-1,1] a traves de las formulas ya vistas:
+                    
+                    \begin{align*}
+                        x=\dfrac{(b+a)+(b-a)x_d}{2},dx=\dfrac{(b-a)}{2}dx_d
+                    \end{align*}
+                    
+                    \item Evaluamos las variables [0,3] en a y b:
+                    
+                     \begin{equation*}
+                        x=\dfrac{(3+0)+(3-0)x}{2}=\dfrac{3}{2}x+\dfrac{3}{2}
+                    \end{equation*}
+                    
+                    \begin{equation*}
+                        dx=\dfrac{(3-0)}{2}dx=\dfrac{3}{2}dx
+                    \end{equation*}
+                    
+                    \item Ahora remplazamos $x$ y $dx$ en nuestra funcion:
+                    
+                    \begin{equation*} 
+                        f(\frac{3}{2}x_n+\frac{3}{2})=\frac{e^{\frac{3}{2}x_n+\frac{3}{2}}sen(\frac{3}{2}x_n+\frac{3}{2})}{1+(\frac{3}{2}x_n+\frac{3}{2})^2} 
+                    \end{equation*}
+                    
+                    \item Evaluamos $x_n$ con los coeficientes de la cuadratura gaussiana para 2 puntos: 
+                    
+                    
+                    \begin{multline*}
+                        f(\frac{3}{2}x_0+\frac{3}{2})=\\
+                        \\
+                        \frac{e^{\frac{3}{2}(-0.5773502)+\frac{3}{2}}sen(\frac{3}{2}(-0.5773502)+\frac{3}{2})}{1+(\frac{3}{2}(-0.5773502)+\frac{3}{2})^2} \\
+                        =0.796501031
+                    \end{multline*}
+                    
+                            \begin{multline*}
+                        f(\frac{3}{2}x_1+\frac{3}{2})=\\
+                        \\
+                        \frac{e^{\frac{3}{2}(0.5773502)+\frac{3}{2}}sen(\frac{3}{2}(0.5773502)+\frac{3}{2})}{1+(\frac{3}{2}(0.5773502)+\frac{3}{2})^2}\\
+                        =1.130596636
+                    \end{multline*}
+                    
+                    \item Una vez contamos con todos los datos solo debemos realizar la sumatoria:
+                    
+                    \begin{equation*}
+                        I=\frac{3}{2}[w_0f(\frac{3}{2}x_0+\frac{3}{2})+w_1f(\frac{3}{2}x_1+\frac{3}{2})]
+                    \end{equation*}
+                    
+                    \begin{equation*}
+                        I=\frac{3}{2}[(1)(0.796501031)+(1)(1.130596636)]
+                    \end{equation*}
+                    
+                    \item Dandonos como respuesta final:
+                    
+                            
+                    \begin{equation*}
+                        I=2.890646501
+                    \end{equation*}
+                    
+                \end{enumerate}
+                
+                En este caso tenemos un error algo elevado ya que el valor teorico de la integral es de $2.88163$, por lo que si quisieramos obtener una valor mas exacto deberiamos aumentar el numero de nodos.
+            
 \section{Diferencia Media}
 \subsection{Descripción}
 \begin{lipsum}
