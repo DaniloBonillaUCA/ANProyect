@@ -1063,33 +1063,210 @@ Esta ecuación es de las más adecuadas para llevar su implemntación a la compu
             
 \section{Diferencia Media}
 \subsection{Descripción}
-\begin{lipsum}
-    Teorema de Diferencia Media
-\end{lipsum}
+Para comenzar, se desarrollan las fórmulas de diferencias finitas para aproximar derivadas. El metódo de
+diferencias finitas está basado en aproximaciones que permiten reemplazar ecuaciones diferenciales por ecuaciones de diferencia.
+Estas aproximaciones de diferencia finita son de forma algebraica; relacionan el valor de la variable dependiente, en un punto dentro de la region de solución, con sus valores en algunos 
+puntos vecinos. Generalmente se representa como:
+\begin{equation}
+    {f'(x)} = \frac{f(x_{i+1}) - f(x_i)}{x_{i+1} - x_i} + O(x_{i+1} - x_i)
+\end{equation}
+o
+\begin{equation}
+    {f'(x)} = \frac{\Delta f_i}{h} + O(h)
+\end{equation}
+    donde a $\Delta f_i$ se le conoce como la \textit{primera diferencia hacia adelante} y a \textit{h} se le llama el tamaño del paso o incremento; esto es, la longitud del intervalo sobre el cual se realiza la aproximación. \textbf{$O(h)$ es el error de truncamiento} que posee esta.\\
+    
+    Se le llama diferencia “hacia adelante”, porque usa los datos en \textit{i} e \textit{i + 1} para estimar la derivada.  Al término completo $\Delta f/h$ se le conoce como primera diferencia finita dividida. Esta diferencia dividida hacia adelante es sólo una de tantas que pueden desarrollarse a partir de la serie de Taylor para la aproximación de derivadas numéricas. Por ejemplo, las aproximaciones de la \textit{primera derivada utilizando diferencias hacia atrás o diferencias centradas}. Las primeras usan valores en $x_{i–1}$ y $x_i$; mientras que las segundas utilizan valores igualmente espaciados alrededor del punto donde la derivada está estimada. Es posible desarrollar aproximaciones más exactas de la primera derivada incluyendo términos de orden más alto de la serie de Taylor.\\
+    
+    \textbf{Formulas de diferencias centradas}\\
+    Si la funcion $f(x)$ puede evaluarse en puntos que estan a ambos lados de x, entonces la mejor formula que involucra dos puntos es la que utiliza abscisas situadas simetricamente a izquierda y derecha de $x$.\\
+    \begin{figure*}
+    Las Formulas de Diferencias Centradas de orden $O(h^2)$ son:
+    \begin{equation}
+        f'(x)=\frac{f(x+h)-f(x-h)}{2h}
+    \end{equation}
+    \begin{equation}
+        f''(x)=\frac{f(x+h)-2f(x)+f(x-h)}{h^2}    
+    \end{equation}
+    \begin{equation}
+        f^{(3)}(x)=\frac{f(x+2h)-2f(x+h)+2f(x-h)-f(x-2h)}{2h^3}
+    \end{equation}
+    \begin{equation}
+        f^{(4)}(x)=\frac{f(x+2h)-4f(x+h)+6f(x)-4f(x-h)+f(x-2h)}{h^4}
+    \end{equation}
+
+    Cuando hacemos los cálculos con un computador, no es aconsejable elegir un h demasiado pequeño; por eso sería útil disponer de una fórmula que aproxime $f'(x)$ y que tenga un error de truncamiento de orden $O(h^4)$. Si se toman más puntos y más términos de la expansión de la serie de Taylor, podemos obtener las formulas de Diferencias Centradas con error de aproximación de orden $O(h^4)$, en consecuencia, es más exacta.\\
+    
+    Las Formulas de Diferencias Centradas de orden $O(h^4)$ son:
+    
+    \begin{equation}
+        f'(x)=\frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}
+    \end{equation}
+    \begin{equation}
+        f''(x)=\frac{-f(x+2h)+16f(x+h)-30f(x)+16f(x-h)-f(x-2h)}{12h^2}
+    \end{equation}
+    \begin{equation}
+        f^{(3)}(x)=\frac{-f(x+3h)+8f(x+2h)-13f(x+h)+13f(x-h)-8f(x-2h)+f(x-3h)}{8h^3}
+    \end{equation}
+    \begin{equation}
+        f^{(4)}(x)=\frac{-f(x+3h)+12f(x+2h)-39f(x+h)+56f(x)-39f(x-h)+12f(x-2h)-f(x-3h)}{6h^4}
+    \end{equation}
+
+
+    \hrulefill
+    \vspace*{-15pt}
+    \end{figure*}
+    
+    \textbf{Deducción del método:}\\
+    
+    Para encontrar las formulas del metodo de \textit{diferencia media o diferencias centrales} utilizamos la serie de Taylor de $f(x)$, alrededor de $x$, para $f(x+h)$ y $f(x-h)$:
+    
+    \begin{equation}
+        f(x+h) = f(x)+f'(x)h + \frac{f''(x)}{2!}h^2 + \frac{f^{(3)}(x)}{3!}h^3 + \ldots
+    \end{equation}
+    y
+    \begin{equation}
+        f(x-h) = f(x)-f'(x)h + \frac{f''(x)}{2!}h^2 - \frac{f^{(3)}(x)}{3!}h^3 + \ldots
+    \end{equation}
+    Para encontrar la Primera derivada de las diferencias centradas:\\
+    Restamos la expansion de $f(x-h)$ de $f(x+h)$ y obtenemos:
+        \begin{equation}
+            f(x+h)-f(x-h) = 2f'(x)h+2\frac{f^{(3)}}{6}h^3+\ldots
+        \end{equation}
+    Despejamos la primera derivada:
+        \begin{equation}
+            f'(x)=\frac{f(x+h)-f(x-h)}{2h}-\frac{f^{(3)}(x)}{6}h^2-\ldots
+        \end{equation}
+        \begin{equation}
+            \boxed{f'(x)=\frac{f(x+h)-f(x-h)}{2h}}
+        \end{equation}
+    Esta es la primera derivada con un \textbf{error de truncamiento de orden de $O(h^2)$}
 \subsection{Demostraciones de convergencia}
-\begin{lipsum}
-    Demostraciones de convergencia
-\end{lipsum}
+Cuando analizamos la $f'(x)$ de orden $O(h^2)$ observamos que si los valores de la tercera derivada $f^{(3)}(x)$ no cambia muy rápidamente, entonces el error de tuncamiento que aparece en $f'(x)$ tiende a cero a la misma velocidad que $h^2$, lo que expresamos mediante la notación $O(h^2)$.\\
+
+Ahora suponiendo que $f^{(5)}(x)$ está acotada cuando $x$ recorre $[a,b]$, entonces el error de truncamiento de la expresión de la $f'(x)$ de orden $O(h^4)$ converge a cero a la misma velocidad que $h^4$, lo que se expresa mediante la notación $O(h^4)$.\\
+
+Cuando comparamos ambas fórmulas suponiendo que $f(x)$ admite cinco derivadas continuas y que $f^{(3)}(x)$ y $f^{(5)}(x)$ valen más o menos lo mismo, entonces el error de truncamiento de la fórmula $(26)$ es de orden $O(h^4)$ y convergera a cero más rápidamente que el error de truncamiento, que es de orden $O(h^2)$, de la fórmula $(22)$; esto permite usar un incremento mayor para lograr la misma precisión.
 \subsection{Análisis del error}
-\begin{lipsum}
-    Análisis del error
-\end{lipsum}
+
+El error del uso de las formulas puede ser tomado del uso de la formula del error relativo porcentual, el cual nos dice la proporcion del error con respecto al valor exacto de la medicion.
+
+\begin{equation}
+    E_{relativo}=\frac{{Valor\ real} - Valor\ aproximado}{Valor\ exacto}*100
+\end{equation}
+
+Aplicandolo a nuestra formula de diferencias divididas seria:
+
+\begin{equation}
+    E_{relativo}=\frac{f'(x) - \frac{f(x+h)-f(x-h)}{2h}}{f'(x)}*100
+\end{equation}
+
+Un aspecto importante a tomar en cuenta al hacer uso de estas formulas es los errores de redondeo cuando los calculos los realizamos en un computador. Podemos verlo de la siguiente manera, supongamos que usamos un computador para hacer los calculos de manera que escribimos:
+
+\begin{equation}
+    f(x-h)=(y_{-1}) + e_{-1} 
+\end{equation}
+y 
+\begin{equation}
+    f(x+h)=y_1 +e_1
+\end{equation}
+donde se ha aproximado $f(x-h)$ y $f(x+h)$, y se obtienen los resultados en el computador de $y_{-1}$ e $y_1$, teniendo errores de redondeo de $e_{-1}$ y $e_1$\\
+
+Entonces el error en una formula viene dado de la siguiente manera:
+
+\begin{equation}
+    f'(x)=\frac{y_1-y_{-1}}{2h}+E(f,h)
+\end{equation}
+donde 
+
+\begin{equation}
+        E(f,h)=E_{redondeo}(f,h)+E_{truncamiento}(f,h)
+\end{equation}
+\begin{equation}
+    =\frac{e_1-e_{-1}}{2h}-\frac{h^2f^3(x)}{6}
+\end{equation}
+
+o sea, el \textbf{termino del error total} $E(f,h)$ consta de una parte debida a los errores de redondeo mas otra debido al error de truncamiento.
+
 \subsection{Análisis de la eficiencia del método}
-\begin{lipsum}
-    Análisis de la eficiencia del método
-\end{lipsum}
+Al comparar las formulas para la primera derivada de diferencia hacia delante, hacia atras y centrada, se puede apreciar que cada una de ellas requiere la misma cantidad de puntos de la malla para aproximar la derivada en un punto (en este caso dos puntos), la diferencia importante consiste en que la formula de diferencia centrada tiene un error de $O(h^2)$ mientras que las de diferencia hacia adelante y hacia atras tienen un error de $O(h)$
+
+\begin{equation}
+    O(h^2) < O(h)
+\end{equation}
+
+De lo anterior, se puede concluir que la exactitud de la aproximacion puede incrementarse basicamente de 2 formas:\\
+
+\textbf{(1) Incrementando el numero de puntos tomados en la construccion de la formula.} Se obtiene
+una formula que involucre un mayor numero de puntos de la malla y con esto incremente su exactitud. Esto se logra al desarrollar y combinar cierto numero de series de Taylor tomando en cuenta un numero mayor de puntos, por ejemplo $F(x + 2h)$, $F(x+3h)$, etc.\\
+
+\textbf{(2) Incrementando el numero de puntos en la malla.} Dada una formula para cualquiera de las
+aproximaciones, entre mayor sea el numero de puntos en la malla, menor sera el valor del error. Entre mayor sea el numero de puntos que utilice una ecuacion para aproximar la solucion, y en los que este discretizada la region de solucion, mayor sera el trabajo computacional requerido. Por esta razon, es importante que el grado de exactitud de la solucion minimo requerido sea conocido, para evitar asÌ calculos innecesarios.
+
 \subsection{Ventajas y desventajas del método}
-\begin{lipsum}
-    Ventajas y desventajas del método
-\end{lipsum}
+\textbf{Ventaja:}\\
+ Comparando las formulas de diferencias centrales contra las diferencias hacia delante y atras se puede observar que el error de truncamiento es del orden de $h^2$ en contraste con las aproximaciones hacia adelante y hacia atrás, que son del orden de $h$. Por lo tanto, el análisis de la serie de Taylor ofrece la información práctica de que las diferencias centradas son una representación más exacta de la derivada.\\
+ 
+ Por ejemplo, si disminuimos el tamaño del incremento a la mitad, usando diferencias hacia atrás o hacia adelante, el error de truncamiento se reducirá aproximadamente a la mitad; mientras que con diferencias centradas el error se reduciría a la cuarta parte.
+\\
+
+\textbf{Desventaja:}\\
+Si sólo se puede evaluar la función en abcisas que están en un lado de $x_0$, entonces la Fórmulas de Diferencias Centradas no pueden usarse.
 \subsection{Pseudo-código}
-\begin{lipsum}
-    Pseudo-código
-\end{lipsum}
+Este es el pseudo-codigo para la primera derivada de diferencia central el cual calcula la aproximacion a esta en comparacion al valor verdadero, ademas este disminuye el paso $h$ de manera que se puede apreciar en una matriz los diferentes valores de $h$ evaluados en la formula, y el error que este presenta, con la finalidad de observar como los diferentes valores de $h$ se acercan o alejan al valor verdadero \\
+
+ENTRADA: $func$ (es la funcion),$dfunc$ (derivada de la funcion en el orden que se busca calcular),$x$ (valor en el que se deriva), $n$ (numero de iteraciones), $paso$(distancia entre x y los puntos a los lados),$div$ (divisor para el paso),\\
+
+$dftrue$ es la derivada evaluada en el valor de x\\
+$H(i)$ es el valor actual de paso\\
+$D(i)$ es la derivada actual evluada en $x+h$\\
+$E(i)$ es el valor del error relativo porcentual actual\\
+\\
+PASO 1; Sea $i=1$;\\
+$h=paso$,\\ 
+$dftrue=dfunc(x)$
+$H(1)=h$\\
+$D(1)=\frac{(func(x+h)-func(x-h)}{2h}$\\
+$E(1)=abs(dftrue-D(1))$\\
+PASO 2; Mientras $i \leq n$ hacer los pasos;\\
+PASO\ 3; Calcular:\\
+$H(i)=h$;\\
+$D(i)=\frac{(func(x+H)-func(x-H)}{2h}$;\\
+$E(i)=\frac{(dftrue-D(i))}{dftrue}*100$;\\
+$h=h/div$\\
+$L=[H,D,E]$\\
+PASO\ 4; SALIDA $"L"$ (El programa devuelve una matriz con los valores de paso, la primera derivada central evaluada en $x$ y el error relativo porcentual que se obtiene)\\
+PARE
 \subsection{Ejemplos}
-\begin{lipsum}
-    An article \cite{anarticle}
-\end{lipsum}
+Use aproximaciones con diferencias centradas de $O(h^2)$ para estimar la primera derivada de\\
+
+$f(x)=0.1x^4-0.15x^3-0.5x^2-0.25x+1.25$\\
+
+en $x=0.5$ utilizando un incremento de $h=0.5$. Repita el calculo con $h=0.25$. Observe que la derivada se calcula directamente como\\
+
+$f'(x)=-0.4x^3-0.45x^2-1.0x-0.25$\\
+
+y se puede utilizar para calcular el valor verdadero como $f'(0.5)=-0.9125$\\
+
+SOLUCION Para $h=0.5$, la funcion se emplea para determinar\\
+$x-h=0$        \hspace{5em}             $f(x-h)=1.2$\\
+$x=0.5$        \hspace{6em}             $f(x)=0.925$\\
+$x+h=1.0$   \hspace{5em}                $f(x+h)=0.2$\\
+
+y la deferencia dividida centrada es:\\
+
+$f'(0.5)=\frac{0.2-1.2}{1.0}=-0.1$ \hspace{2em} $|E_r|=9.6\%$ \\
+
+Para $h=25$,\\
+
+$x-h=0.25$        \hspace{3em}             $f(x-h)=1.10351563$\\
+$x=0.5$        \hspace{3em}             $f(x)=0.925$\\
+$x+h=0.75$   \hspace{3em}                $f(x+h)=0.6363813$\\
+
+y la deferencia dividida centrada es:\\
+
+$f'(0.5)=\frac{0.63632813-1.10351563}{0.5}=-0.934$\\
+$|E_r|=2.4\%$
 \newpage
 \section{Bibliografía}
 \bibliographystyle{IEEEtran}
