@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.14)  15 MAY 2022 21:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.14)  15 MAY 2022 21:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -795,94 +795,94 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 
 LaTeX Info: Redefining \. on input line 60.
 LaTeX Info: Redefining \% on input line 60.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 (C:\Users\jonathan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
  (C:\Users\jonathan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 4001) in paragraph at lines 84--88
+Underfull \hbox (badness 4001) in paragraph at lines 87--91
 \OT1/ptm/m/n/10 cien-cias m[]as im-por-tan-tes pa-ra el de-sa-rro-llo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--93
+Underfull \hbox (badness 10000) in paragraph at lines 92--96
 []\OT1/ptm/m/n/10 Te[]ori-ca-men-te pue-den mo-de-lar-se cier-tas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--93
+Underfull \hbox (badness 10000) in paragraph at lines 92--96
 
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 94--97
+Underfull \hbox (badness 3635) in paragraph at lines 97--100
 \OT1/ptm/m/n/10 a ve-ces lla-ma-do "So-lu-cio-nes Num[]eri-cas"que
  []
 
 
-Underfull \hbox (badness 5802) in paragraph at lines 94--97
+Underfull \hbox (badness 5802) in paragraph at lines 97--100
 \OT1/ptm/m/n/10 per-mi-ten re-sol-ver pro-ble-mas que in-vo-lu-cran
  []
 
 
-Underfull \hbox (badness 6445) in paragraph at lines 94--97
+Underfull \hbox (badness 6445) in paragraph at lines 97--100
 \OT1/ptm/m/n/10 fun-cio-nes que son de-ma-sia-do com-ple-jas o
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 94--97
+Underfull \hbox (badness 2961) in paragraph at lines 97--100
 \OT1/ptm/m/n/10 no tie-nen una so-lu-ci[]on exac-ta por c[]alcu-los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--97
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
 
-LaTeX Warning: Citation `apunteClase' on page 1 undefined on input line 101.
+LaTeX Warning: Citation `apunteClase' on page 1 undefined on input line 104.
 
 
-LaTeX Warning: Citation `chapra_mtodos_2007' on page 1 undefined on input line 124.
+LaTeX Warning: Citation `chapra_mtodos_2007' on page 1 undefined on input line 127.
 
 
-LaTeX Warning: Citation `burden_numerical_2016' on page 1 undefined on input line 127.
+LaTeX Warning: Citation `burden_numerical_2016' on page 1 undefined on input line 130.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--129
+Underfull \hbox (badness 10000) in paragraph at lines 126--132
 \OT1/ptm/m/n/10 di-se[]nada pa-ra ob-te-ner in-te-gra-les num[]eri-cas
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 123--129
+Underfull \hbox (badness 4441) in paragraph at lines 126--132
 \OT1/ptm/m/n/10 Werner Rom-berg (1909{2093) con-ci-bi[]o es-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--129
+Underfull \hbox (badness 10000) in paragraph at lines 126--132
 
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 130--131
+Underfull \hbox (badness 1412) in paragraph at lines 133--134
 \OT1/ptm/m/n/10 es-ti-ma-cio-nes de la in-te-gral pa-ra ob-te-ner una
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 
-LaTeX Warning: Citation `chapra_mtodos_2007' on page 1 undefined on input line 132.
+LaTeX Warning: Citation `chapra_mtodos_2007' on page 1 undefined on input line 135.
 
 [1
 Non-PDF special ignored!
@@ -891,129 +891,124 @@ Non-PDF special ignored!
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
+Underfull \hbox (badness 10000) in paragraph at lines 226--229
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 5939) in paragraph at lines 244--247
+Underfull \hbox (badness 5939) in paragraph at lines 247--250
 \OT1/ptm/m/n/10 es muy efi-cien-te. So-bre-to-do al com-pa-rar-lo
  []
 
 
-Underfull \hbox (badness 4048) in paragraph at lines 244--247
+Underfull \hbox (badness 4048) in paragraph at lines 247--250
 \OT1/ptm/m/n/10 que sa-tis-fa-ga el cri-te-rio de pa-ro, po-de-mos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 247--250
 
  []
 
 
-LaTeX Warning: Citation `chapra_mtodos_2007' on page 3 undefined on input line 248.
+LaTeX Warning: Citation `chapra_mtodos_2007' on page 3 undefined on input line 251.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 281--283
 []\OT1/ptm/m/n/10 Al tra-ba-jar con la ite-ra-ci[]on de ni-vel 4,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 281--283
 
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 281--286
+Underfull \hbox (badness 1354) in paragraph at lines 284--289
 \OT1/ptm/m/n/10 el m[]eto-do de Sim-pson, es-te se tar-dar[]^^Pa 256
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--286
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
 [3]
 
-LaTeX Warning: Citation `in_mr' on page 4 undefined on input line 318.
+LaTeX Warning: Citation `in_mr' on page 4 undefined on input line 321.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 320--325
+Underfull \hbox (badness 1590) in paragraph at lines 323--328
 \OT1/ptm/m/n/10 so-lo los 2 []ulti-mos ren-glo-nes se guar-dan en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--325
+Underfull \hbox (badness 10000) in paragraph at lines 323--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
+Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--332
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
@@ -1023,17 +1018,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--335
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 335--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--339
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
@@ -1043,554 +1033,564 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--340
  []
 
 
-LaTeX Warning: Citation `chapra_mtodos_2007' on page 4 undefined on input line 343.
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
+
+ []
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 354.
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+
+ []
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 355.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 355.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 355.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 355.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 355.
+LaTeX Warning: Citation `chapra_mtodos_2007' on page 4 undefined on input line 346.
 
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 357.
 
 
-LaTeX Warning: Citation `in_mr' on page 4 undefined on input line 364.
+LaTeX Warning: Command \textendash invalid in math mode on input line 358.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--374
+LaTeX Warning: Command \textendash invalid in math mode on input line 358.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 358.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 358.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 358.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 360.
+
+
+LaTeX Warning: Citation `in_mr' on page 4 undefined on input line 367.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 \OT1/ptm/m/n/10 beginalign* por me-dio de la re-gla
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--374
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 
  []
 
 [4]
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 375.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 378.
 
 
-Overfull \hbox (3.30234pt too wide) detected at line 377
+Overfull \hbox (3.30234pt too wide) detected at line 380
 []\OML/cmm/m/it/8 T[] \OT1/cmr/m/n/8 = [][\OML/cmm/m/it/8 T[] \OT1/cmr/m/n/8 + [] [] \OML/cmm/m/it/8 f\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 a \OT1/cmr/m/n/8 + ([]\OML/cmm/m/it/8 i\OT1/cmr/m/n/8 ))]
  []
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 377.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 380.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 377.
+(Font)              size <5> substituted on input line 380.
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 379--381
+Underfull \hbox (badness 2662) in paragraph at lines 382--384
 []\OT1/ptm/m/n/10 Los res-tan-tes t[]ermi-nos de las dis-tin-tas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--381
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--388
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--418
+Underfull \hbox (badness 10000) in paragraph at lines 419--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
 
-Overfull \hbox (6.79964pt too wide) detected at line 421
+Overfull \hbox (6.79964pt too wide) detected at line 424
 []\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 ) = [][\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ] = 1[]859140914
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 
  []
 
 
-Overfull \hbox (40.6894pt too wide) detected at line 425
+Overfull \hbox (40.6894pt too wide) detected at line 428
 []\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 ) = [][\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ] = 1[]571583165
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-Overfull \hbox (104.02449pt too wide) detected at line 429
+Overfull \hbox (104.02449pt too wide) detected at line 432
 []\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 ) = [][\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 2[\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ] + \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ] = 1[]490678862
  []
 
 
-Overfull \hbox (31.00365pt too wide) detected at line 446
+Overfull \hbox (31.00365pt too wide) detected at line 449
 [][]\OT1/cmr/m/n/10 (1[]571583165) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (1[]859140914) = 1[]475730582
  []
 
 
-Overfull \hbox (31.00365pt too wide) detected at line 452
+Overfull \hbox (31.00365pt too wide) detected at line 455
 [][]\OT1/cmr/m/n/10 (1[]490678862) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (1[]571583165) = 1[]463710761
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 479--481
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 482--484
 
  []
 
 
-LaTeX Warning: Citation `chapra_metodos_2007' on page 6 undefined on input line 485.
+Underfull \hbox (badness 10000) in paragraph at lines 485--487
+
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--508
+LaTeX Warning: Citation `chapra_metodos_2007' on page 6 undefined on input line 488.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
 
  []
 
 <images/trapecio Simpson.png, id=42, 286.82156pt x 112.92188pt>
 File: images/trapecio Simpson.png Graphic file (type png)
 <use images/trapecio Simpson.png>
-Package pdftex.def Info: images/trapecio Simpson.png  used on input line 512.
+Package pdftex.def Info: images/trapecio Simpson.png  used on input line 515.
 (pdftex.def)             Requested size: 157.75233pt x 62.10721pt.
 
-LaTeX Warning: Citation `openstax_calculusv1' on page 6 undefined on input line 528.
+LaTeX Warning: Citation `openstax_calculusv1' on page 6 undefined on input line 531.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--529
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
 
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 530--531
+Underfull \hbox (badness 3199) in paragraph at lines 533--534
 []\OT1/ptm/m/n/10 A su vez la Re-gla del Tra-pe-cio in-te-gra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 \OT1/ptm/m/n/10 exac-ta-men-te fun-cio-nes li-nea-les. Tie-ne un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 
  []
 
 [6 <./images/trapecio Simpson.png>]
-Overfull \hbox (1.25586pt too wide) detected at line 547
+Overfull \hbox (1.25586pt too wide) detected at line 550
 []
  []
 
 
-Overfull \hbox (4.23264pt too wide) detected at line 560
+Overfull \hbox (4.23264pt too wide) detected at line 563
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--562
+Underfull \hbox (badness 10000) in paragraph at lines 563--565
 
  []
 
 
-Overfull \hbox (7.77226pt too wide) detected at line 572
+Overfull \hbox (7.77226pt too wide) detected at line 575
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--574
+Underfull \hbox (badness 10000) in paragraph at lines 575--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
+Underfull \hbox (badness 10000) in paragraph at lines 587--589
 []\OT1/ptm/m/n/10 Podemos ob-ser-var que el co-efi-cien-te
  []
 
 
-Underfull \hbox (badness 7344) in paragraph at lines 584--586
+Underfull \hbox (badness 7344) in paragraph at lines 587--589
 \OT1/ptm/m/n/10 de la ter-ce-ra di-fe-ren-cia di-vi-di-da es ce-ro.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
+Underfull \hbox (badness 10000) in paragraph at lines 587--589
 
  []
 
 <images/error Simpson.png, id=48, 867.24pt x 198.7425pt>
 File: images/error Simpson.png Graphic file (type png)
 <use images/error Simpson.png>
-Package pdftex.def Info: images/error Simpson.png  used on input line 588.
+Package pdftex.def Info: images/error Simpson.png  used on input line 591.
 (pdftex.def)             Requested size: 190.7934pt x 43.72348pt.
 
-Underfull \hbox (badness 2426) in paragraph at lines 593--595
+Underfull \hbox (badness 2426) in paragraph at lines 596--598
 \OT1/ptm/m/n/10 Pues-to que se su-pri-me la ter-ce-ra di-fe-ren-cia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
+Underfull \hbox (badness 10000) in paragraph at lines 596--598
 
  []
 
 
-LaTeX Warning: Citation `chapra_merthod_2007' on page 7 undefined on input line 609.
+LaTeX Warning: Citation `chapra_merthod_2007' on page 7 undefined on input line 612.
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 609--610
+Underfull \hbox (badness 5681) in paragraph at lines 612--613
 []\OT1/ptm/m/n/10 Para evi-den-ciar la efi-cien-cia del m[]eto-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 611--613
+Underfull \hbox (badness 10000) in paragraph at lines 614--616
 []\OT1/ptm/m/n/10 Con la si-guien-te ecua-cion in-te-grar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 611--613
+Underfull \hbox (badness 10000) in paragraph at lines 614--616
 
  []
 
 [7 <./images/error Simpson.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 684--685
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 3229) in paragraph at lines 686--704
+Underfull \hbox (badness 3229) in paragraph at lines 689--707
 \OML/cmm/m/it/10 Calculate \OT1/cmr/m/n/10 :$ $\OML/cmm/m/it/10 stepSize \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 lowerLimit \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--704
+Underfull \hbox (badness 10000) in paragraph at lines 689--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 3229) in paragraph at lines 707--725
+Underfull \hbox (badness 3229) in paragraph at lines 710--728
 \OML/cmm/m/it/10 Calculate \OT1/cmr/m/n/10 :$ $\OML/cmm/m/it/10 stepSize \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 lowerLimit \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--725
+Underfull \hbox (badness 10000) in paragraph at lines 710--728
 
  []
 
 [8]
 
-LaTeX Warning: Citation `chapra_method_2007' on page 9 undefined on input line 727.
+LaTeX Warning: Citation `chapra_method_2007' on page 9 undefined on input line 730.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--730
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
+Underfull \hbox (badness 10000) in paragraph at lines 732--733
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--734
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
 
  []
 
 
-Overfull \hbox (17.23158pt too wide) detected at line 746
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
+
+ []
+
+
+Overfull \hbox (17.23158pt too wide) detected at line 749
 []\OML/cmm/m/it/10 I [] \OT1/cmr/m/n/10 0[]32[] = 0[]3803237
  []
 
 
-Overfull \hbox (72.23163pt too wide) detected at line 752
+Overfull \hbox (72.23163pt too wide) detected at line 755
 []\OML/cmm/m/it/10 I [] \OT1/cmr/m/n/10 0[]48[] = 1[]264754
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
 
  []
 
@@ -1598,17 +1598,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 762--763
 <images/gauss.PNG, id=60, 578.16pt x 72.27pt>
 File: images/gauss.PNG Graphic file (type png)
 <use images/gauss.PNG>
-Package pdftex.def Info: images/gauss.PNG  used on input line 803.
+Package pdftex.def Info: images/gauss.PNG  used on input line 806.
 (pdftex.def)             Requested size: 213.39566pt x 26.67441pt.
 
-Overfull \hbox (10.26883pt too wide) in paragraph at lines 803--804
+Overfull \hbox (10.26883pt too wide) in paragraph at lines 806--807
  [][] 
  []
 
 <images/puntosX_C.PNG, id=61, 268.75406pt x 253.69781pt>
 File: images/puntosX_C.PNG Graphic file (type png)
 <use images/puntosX_C.PNG>
-Package pdftex.def Info: images/puntosX_C.PNG  used on input line 821.
+Package pdftex.def Info: images/puntosX_C.PNG  used on input line 824.
 (pdftex.def)             Requested size: 113.81102pt x 107.43497pt.
 
 Underfull \vbox (badness 1852) has occurred while \output is active []
@@ -1616,23 +1616,23 @@ Underfull \vbox (badness 1852) has occurred while \output is active []
 <images/transformacionlimites.PNG, id=62, 155.07938pt x 64.74188pt>
 File: images/transformacionlimites.PNG Graphic file (type png)
 <use images/transformacionlimites.PNG>
-Package pdftex.def Info: images/transformacionlimites.PNG  used on input line 864.
+Package pdftex.def Info: images/transformacionlimites.PNG  used on input line 867.
 (pdftex.def)             Requested size: 85.35826pt x 35.63481pt.
  [10 <./images/gauss.PNG> <./images/puntosX_C.PNG> <./images/transformacionlimites.PNG>]
 <images/Convergencia_Gauss.png, id=69, 806.01125pt x 627.34375pt>
 File: images/Convergencia_Gauss.png Graphic file (type png)
 <use images/Convergencia_Gauss.png>
-Package pdftex.def Info: images/Convergencia_Gauss.png  used on input line 879.
+Package pdftex.def Info: images/Convergencia_Gauss.png  used on input line 882.
 (pdftex.def)             Requested size: 203.12683pt x 158.0991pt.
 
-Overfull \hbox (1.90912pt too wide) detected at line 893
+Overfull \hbox (1.90912pt too wide) detected at line 896
 []
  []
 
 <images/error_gauss.PNG, id=70, 756.57657pt x 217.5628pt>
 File: images/error_gauss.PNG Graphic file (type png)
 <use images/error_gauss.PNG>
-Package pdftex.def Info: images/error_gauss.PNG  used on input line 901.
+Package pdftex.def Info: images/error_gauss.PNG  used on input line 904.
 (pdftex.def)             Requested size: 203.12683pt x 58.41077pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1640,12 +1640,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/eficiencia_metodos_nodos.PNG, id=71, 365.86688pt x 296.60812pt>
 File: images/eficiencia_metodos_nodos.PNG Graphic file (type png)
 <use images/eficiencia_metodos_nodos.PNG>
-Package pdftex.def Info: images/eficiencia_metodos_nodos.PNG  used on input line 920.
+Package pdftex.def Info: images/eficiencia_metodos_nodos.PNG  used on input line 923.
 (pdftex.def)             Requested size: 203.12683pt x 164.67375pt.
 <images/eficiencia_metodos_pesos.PNG, id=72, 364.36125pt x 295.1025pt>
 File: images/eficiencia_metodos_pesos.PNG Graphic file (type png)
 <use images/eficiencia_metodos_pesos.PNG>
-Package pdftex.def Info: images/eficiencia_metodos_pesos.PNG  used on input line 927.
+Package pdftex.def Info: images/eficiencia_metodos_pesos.PNG  used on input line 930.
 (pdftex.def)             Requested size: 203.12683pt x 164.51328pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1655,10 +1655,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [11 <./images/Convergencia_Gauss.png> <./images/error_gauss.PNG> <./images/eficiencia_metodos_nodos.PNG>]
 
-LaTeX Warning: Citation `in_mr' on page 12 undefined on input line 968.
+LaTeX Warning: Citation `in_mr' on page 12 undefined on input line 971.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
+Underfull \hbox (badness 10000) in paragraph at lines 971--972
 
  []
 
@@ -1666,27 +1666,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 968--969
 Underfull \vbox (badness 3240) has occurred while \output is active []
 
 
-Underfull \hbox (badness 3503) in paragraph at lines 970--974
+Underfull \hbox (badness 3503) in paragraph at lines 973--977
 \OT1/ptm/m/n/10 SALIDA: In-te-gral cal-cu-la-da (se guar-dan en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--974
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--978
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 978--979
+Underfull \hbox (badness 10000) in paragraph at lines 973--977
 
  []
 
@@ -1696,53 +1681,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 979--980
  []
 
 
-LaTeX Warning: Citation `Numerical Methods in Engineering with Python 3' on page 12 undefined on input line 982.
+Underfull \hbox (badness 10000) in paragraph at lines 980--981
+
+ []
 
 
-Overfull \hbox (0.66518pt too wide) detected at line 1008
+Underfull \hbox (badness 10000) in paragraph at lines 981--982
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--983
+
+ []
+
+
+LaTeX Warning: Citation `Numerical Methods in Engineering with Python 3' on page 12 undefined on input line 985.
+
+
+Overfull \hbox (0.66518pt too wide) detected at line 1011
 []
  []
 
 [12 <./images/eficiencia_metodos_pesos.PNG>]
-Overfull \hbox (7.11745pt too wide) detected at line 1051
+Overfull \hbox (7.11745pt too wide) detected at line 1054
 \OML/cmm/m/it/10 I \OT1/cmr/m/n/10 = [][(1)(0[]796501031) + (1)(1[]130596636)]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1081
 
  []
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 1079.
+LaTeX Warning: Command \textendash invalid in math mode on input line 1082.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1083
 
  []
 
 
-Overfull \hbox (22.9515pt too wide) detected at line 1113
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+
+ []
+
+
+Overfull \hbox (22.9515pt too wide) detected at line 1116
 []\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
 
  []
 
 [13]
-Overfull \hbox (13.56007pt too wide) detected at line 1126
+Overfull \hbox (13.56007pt too wide) detected at line 1129
 []\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 h \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 h[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 h[] \OT1/cmr/m/n/10 + []
  []
 
 
-Overfull \hbox (13.56007pt too wide) detected at line 1130
+Overfull \hbox (13.56007pt too wide) detected at line 1133
 []\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 h \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 h[] \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 h[] \OT1/cmr/m/n/10 + []
  []
 
@@ -1750,152 +1750,152 @@ Overfull \hbox (13.56007pt too wide) detected at line 1130
 Underfull \vbox (badness 4429) has occurred while \output is active []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 1145--1146
+Underfull \hbox (badness 1484) in paragraph at lines 1148--1149
 \OT1/ptm/m/n/10 ob-ser-va-mos que si los va-lo-res de la ter-ce-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
 
  []
 
 
-Overfull \hbox (11.85023pt too wide) detected at line 1156
+Overfull \hbox (11.85023pt too wide) detected at line 1159
 []\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^C \OT1/cmr/m/n/10 100
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1172--1174
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1177
 
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 1198--1199
+Underfull \hbox (badness 2181) in paragraph at lines 1201--1202
 []\OT1/ptm/m/n/10 De lo an-te-rior, se pue-de con-cluir que la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1199
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1202
 
  []
 
 
-Underfull \hbox (badness 5862) in paragraph at lines 1200--1202
+Underfull \hbox (badness 5862) in paragraph at lines 1203--1205
 \OT1/ptm/m/n/10 Se ob-tie-ne una for-mu-la que in-vo-lu-cre un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1202
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 1207--1209
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1210--1212
 
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 1216--1217
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1215
+
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 1219--1220
 []\OT1/ptm/m/n/10 Este es el pseudo-codigo pa-ra la pri-me-ra
  []
 
 
-Underfull \hbox (badness 6741) in paragraph at lines 1216--1217
+Underfull \hbox (badness 6741) in paragraph at lines 1219--1220
 \OT1/ptm/m/n/10 ver-da-de-ro, ade-mas es-te dis-mi-nu-ye el pa-so
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 1216--1217
+Underfull \hbox (badness 1490) in paragraph at lines 1219--1220
 \OT1/ptm/m/n/10 ma-triz los di-fe-ren-tes va-lo-res de $\OML/cmm/m/it/10 h$ \OT1/ptm/m/n/10 eva-lua-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1217
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
 []\OT1/ptm/m/n/10 ENTRADA: $\OML/cmm/m/it/10 func$ \OT1/ptm/m/n/10 (es la funcion),$\OML/cmm/m/it/10 dfunc$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1220--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1223--1243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1245--1246
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
 
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 1249--1250
+Underfull \hbox (badness 1642) in paragraph at lines 1252--1253
 []\OT1/ptm/m/n/10 y se pue-de uti-li-zar pa-ra cal-cu-lar el va-lor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1255
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1256--1257
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1264
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1266--1267
+Underfull \hbox (badness 10000) in paragraph at lines 1269--1270
 
  []
 
@@ -1921,7 +1921,7 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  99i,21n,103p,909b,609s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Proyecto.pdf (17 pages, 603545 bytes).
+Output written on Proyecto.pdf (17 pages, 603546 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

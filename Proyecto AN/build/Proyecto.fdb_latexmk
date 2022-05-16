@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Proyecto"] 1652671306 "Proyecto.aux" "Proyecto.bbl" "Proyecto" 1652671310
+["bibtex Proyecto"] 1652672934 "Proyecto.aux" "Proyecto.bbl" "Proyecto" 1652672934
   "C:/Users/jonathan/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "Proyecto.aux" 1652671309 8083 fb59f8aa7655232c05b146f6e377e507 "pdflatex"
+  "Proyecto.aux" 1652672932 8083 fb59f8aa7655232c05b146f6e377e507 "pdflatex"
   "Proyecto.bib" 0 -1 0 ""
   (generated)
   "Proyecto.bbl"
   "Proyecto.blg"
-["pdflatex"] 1652671306 "c:/Users/jonathan/Documents/Latex/ANProyect/Proyecto AN/Proyecto.tex" "Proyecto.pdf" "Proyecto" 1652671310
+["pdflatex"] 1652672929 "c:/Users/jonathan/Documents/Latex/ANProyect/Proyecto AN/Proyecto.tex" "Proyecto.pdf" "Proyecto" 1652672934
   "C:/Users/jonathan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1652670094 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/jonathan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1652571529 10248377 516bb9531c4c7b4cfedb9ff700f22b4e ""
   "C:/Users/jonathan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -252,10 +252,10 @@
   "C:/Users/jonathan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636284872 56029 3f7889dab51d620aa43177c391b7b190 ""
   "C:/Users/jonathan/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/jonathan/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "Proyecto.aux" 1652671309 8083 fb59f8aa7655232c05b146f6e377e507 "pdflatex"
+  "Proyecto.aux" 1652672932 8083 fb59f8aa7655232c05b146f6e377e507 "pdflatex"
   "Proyecto.bbl" 0 -1 0 "bibtex Proyecto"
-  "Proyecto.tex" 1652671305 64760 6755e7fb424b186bd36b007d33edb7be ""
-  "c:/Users/jonathan/Documents/Latex/ANProyect/Proyecto AN/Proyecto.tex" 1652671305 64760 6755e7fb424b186bd36b007d33edb7be ""
+  "Proyecto.tex" 1652672926 64915 440161d8230734fea3f8c7ad99074525 ""
+  "c:/Users/jonathan/Documents/Latex/ANProyect/Proyecto AN/Proyecto.tex" 1652672926 64915 440161d8230734fea3f8c7ad99074525 ""
   "images/Convergencia_Gauss.png" 1652669968 43588 a550cafb02a1bed33bf7b26b2ec06a89 ""
   "images/eficiencia_metodos_nodos.PNG" 1652669968 59733 e2459604701dac9725d6631206ab6473 ""
   "images/eficiencia_metodos_pesos.PNG" 1652669968 75156 7c6d90f7befb727008a6908201a56414 ""
